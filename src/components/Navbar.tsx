@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Facebook, Instagram, Youtube, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Youtube, Menu, X, LogIn, LogOut } from "lucide-react";
 import milanoLogo from "@/assets/milano-logo.png";
+import { useAuth } from "@/hooks/useAuth";
 
 const navLinks = [
   { label: "Home", href: "#home" },
