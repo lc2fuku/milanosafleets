@@ -127,7 +127,7 @@ export default function DocumentViewer() {
           {documents.map((doc, i) => (
             <button
               key={doc.name}
-              onClick={() => setActiveDoc(doc)}
+              onClick={() => handleDocClick(doc)}
               className={`group text-left p-5 rounded-md border border-border bg-card transition-all duration-500 active:scale-[0.98] hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.08)] ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
               }`}
