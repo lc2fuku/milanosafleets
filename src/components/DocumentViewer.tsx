@@ -1,10 +1,10 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { FileText, Shield, Eye, X, Presentation, Lock } from "lucide-react";
+import { FileText, Shield, Eye, Presentation, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Document {
   name: string;
@@ -17,49 +17,49 @@ interface Document {
 const documents: Document[] = [
   {
     name: "Business Plan",
-    file: "/documents/Business_Plan.pdf",
+    file: "Business_Plan.pdf",
     type: "pdf",
     icon: "file",
     description: "Electric Scooter Fleet Funding Proposal",
   },
   {
     name: "Pitch Deck",
-    file: "/documents/Solar_Fleet_Pitch_Deck.pptx",
+    file: "Solar_Fleet_Pitch_Deck.pptx",
     type: "pptx",
     icon: "presentation",
     description: "Solar Fleet Investment Presentation",
   },
   {
     name: "COR14.3 Company Registration",
-    file: "/documents/COR14.3_Company_Registration.pdf",
+    file: "COR14.3_Company_Registration.pdf",
     type: "pdf",
     icon: "file",
     description: "CIPC Registration Certificate",
   },
   {
     name: "B-BBEE Certificate",
-    file: "/documents/BEE_Certificate.pdf",
+    file: "BEE_Certificate.pdf",
     type: "pdf",
     icon: "file",
     description: "Broad-Based Black Economic Empowerment Level 1",
   },
   {
     name: "Tax Clearance Certificate",
-    file: "/documents/Tax_Clearance_Certificate.pdf",
+    file: "Tax_Clearance_Certificate.pdf",
     type: "pdf",
     icon: "file",
     description: "SARS Tax Compliance Status",
   },
   {
     name: "Signed Lease Agreement",
-    file: "/documents/Signed_Lease_Agreement.pdf",
+    file: "Signed_Lease_Agreement.pdf",
     type: "pdf",
     icon: "file",
     description: "Business Premises Lease Contract",
   },
   {
     name: "FNB Account Confirmation",
-    file: "/documents/FNB_Business_Account_Confirmation.pdf",
+    file: "FNB_Business_Account_Confirmation.pdf",
     type: "pdf",
     icon: "file",
     description: "Banking Details Verification Letter",
@@ -69,15 +69,54 @@ const documents: Document[] = [
 export default function DocumentViewer() {
   const { ref, isVisible } = useScrollReveal();
   const [activeDoc, setActiveDoc] = useState<Document | null>(null);
-  const { user, loading } = useAuth();
+  const [signedUrl, setSignedUrl] = useState<string | null>(null);
+  const [urlLoading, setUrlLoading] = useState(false);
+  const { user } = useAuth();
   const navigate = useNavigate();
 
-  const handleDocClick = (doc: Document) => {
+  const handleDocClick = async (doc: Document) => {
     if (!user) {
       navigate("/auth");
       return;
     }
     setActiveDoc(doc);
+    setSignedUrl(null);
+    setUrlLoading(true);
+
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        navigate("/auth");
+        return;
+      }
+
+      const response = await supabase.functions.invoke("serve-document", {
+        body: null,
+        headers: {},
+      });
+
+      // Use fetch directly with the query param
+      const res = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/serve-document?file=${encodeURIComponent(doc.file)}`,
+        {
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!res.ok) {
+        throw new Error("Failed to get document URL");
+      }
+
+      const result = await res.json();
+      setSignedUrl(result.url);
+    } catch (err) {
+      console.error("Error fetching document:", err);
+    } finally {
+      setUrlLoading(false);
+    }
   };
 
   // Disable right-click on the viewer
@@ -88,14 +127,11 @@ export default function DocumentViewer() {
     return () => document.removeEventListener("contextmenu", handler);
   }, [activeDoc]);
 
-  const getViewerUrl = (doc: Document) => {
+  const getViewerUrl = (url: string, doc: Document) => {
     if (doc.type === "pptx") {
-      // Use Microsoft Office Online viewer for PPTX
-      const fullUrl = `${window.location.origin}${doc.file}`;
-      return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(fullUrl)}`;
+      return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
     }
-    // PDF with toolbar disabled
-    return `${doc.file}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`;
+    return `${url}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`;
   };
 
   return (
@@ -171,14 +207,22 @@ export default function DocumentViewer() {
               </DialogDescription>
             </DialogHeader>
             <div className="flex-1 h-full min-h-0" style={{ height: "calc(85vh - 80px)" }}>
-              {activeDoc && (
+              {urlLoading ? (
+                <div className="flex items-center justify-center h-full">
+                  <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                </div>
+              ) : signedUrl && activeDoc ? (
                 <iframe
-                  src={getViewerUrl(activeDoc)}
+                  src={getViewerUrl(signedUrl, activeDoc)}
                   className="w-full h-full border-0"
                   title={activeDoc.name}
                   sandbox="allow-same-origin allow-scripts allow-popups"
                   style={{ pointerEvents: "auto", userSelect: "none" }}
                 />
+              ) : (
+                <div className="flex items-center justify-center h-full text-muted-foreground text-sm">
+                  Unable to load document. Please try again.
+                </div>
               )}
             </div>
           </DialogContent>
