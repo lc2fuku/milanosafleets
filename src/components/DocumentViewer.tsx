@@ -69,6 +69,16 @@ const documents: Document[] = [
 export default function DocumentViewer() {
   const { ref, isVisible } = useScrollReveal();
   const [activeDoc, setActiveDoc] = useState<Document | null>(null);
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleDocClick = (doc: Document) => {
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
+    setActiveDoc(doc);
+  };
 
   // Disable right-click on the viewer
   useEffect(() => {
