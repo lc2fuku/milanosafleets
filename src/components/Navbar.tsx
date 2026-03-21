@@ -68,6 +68,23 @@ export default function Navbar() {
               <s.icon size={18} />
             </a>
           ))}
+          {user ? (
+            <button
+              onClick={signOut}
+              className="ml-2 p-2 rounded-md text-text-secondary hover:text-primary hover:bg-surface transition-all duration-200"
+              title="Sign Out"
+            >
+              <LogOut size={18} />
+            </button>
+          ) : (
+            <a
+              href="/auth"
+              className="ml-2 p-2 rounded-md text-text-secondary hover:text-primary hover:bg-surface transition-all duration-200"
+              title="Sign In"
+            >
+              <LogIn size={18} />
+            </a>
+          )}
         </div>
 
         {/* Mobile toggle */}
