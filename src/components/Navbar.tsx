@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Facebook, Instagram, Youtube, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Youtube, Menu, X, LogIn, LogOut } from "lucide-react";
 import milanoLogo from "@/assets/milano-logo.png";
+import { useAuth } from "@/hooks/useAuth";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -20,6 +21,7 @@ const socials = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { user, signOut } = useAuth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -66,6 +68,23 @@ export default function Navbar() {
               <s.icon size={18} />
             </a>
           ))}
+          {user ? (
+            <button
+              onClick={signOut}
+              className="ml-2 p-2 rounded-md text-text-secondary hover:text-primary hover:bg-surface transition-all duration-200"
+              title="Sign Out"
+            >
+              <LogOut size={18} />
+            </button>
+          ) : (
+            <a
+              href="/auth"
+              className="ml-2 p-2 rounded-md text-text-secondary hover:text-primary hover:bg-surface transition-all duration-200"
+              title="Sign In"
+            >
+              <LogIn size={18} />
+            </a>
+          )}
         </div>
 
         {/* Mobile toggle */}

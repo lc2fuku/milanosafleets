@@ -1,7 +1,10 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { FileText, Shield, Eye, X, Presentation } from "lucide-react";
+import { FileText, Shield, Eye, X, Presentation, Lock } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface Document {
   name: string;
@@ -66,6 +69,16 @@ const documents: Document[] = [
 export default function DocumentViewer() {
   const { ref, isVisible } = useScrollReveal();
   const [activeDoc, setActiveDoc] = useState<Document | null>(null);
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleDocClick = (doc: Document) => {
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
+    setActiveDoc(doc);
+  };
 
   // Disable right-click on the viewer
   useEffect(() => {
@@ -114,7 +127,7 @@ export default function DocumentViewer() {
           {documents.map((doc, i) => (
             <button
               key={doc.name}
-              onClick={() => setActiveDoc(doc)}
+              onClick={() => handleDocClick(doc)}
               className={`group text-left p-5 rounded-md border border-border bg-card transition-all duration-500 active:scale-[0.98] hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.08)] ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
               }`}
