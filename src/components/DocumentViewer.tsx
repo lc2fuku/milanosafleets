@@ -1,7 +1,10 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { FileText, Shield, Eye, X, Presentation } from "lucide-react";
+import { FileText, Shield, Eye, X, Presentation, Lock } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface Document {
   name: string;
