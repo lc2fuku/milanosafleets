@@ -1,3 +1,5 @@
+import milanoLogo from "@/assets/milano-logo.png";
+
 export default function Footer() {
   const legalLinks = [
     { label: "Privacy Policy", href: "https://www.termsfeed.com/live/ae979cef-93e8-4041-8867-c00859e49ae5" },
@@ -11,8 +13,11 @@ export default function Footer() {
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <div className="text-lg font-extrabold tracking-tight text-foreground mb-2">
-              MILANO<span className="text-primary">SA</span>
+            <div className="flex items-center gap-3 mb-2">
+              <img src={milanoLogo} alt="Milano SA" className="h-10 w-auto rounded-full" />
+              <span className="text-lg font-extrabold tracking-tight text-foreground">
+                MILANO<span className="text-primary">SA</span>
+              </span>
             </div>
             <p className="text-xs text-text-secondary">
               10521 Tsotsobe Street, Kwazakhele, Gqeberha, 6205

@@ -19,13 +19,13 @@ export default function BusinessPlanSection() {
           <div className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
                style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}>
             <span className="text-xs font-semibold tracking-widest uppercase text-primary">Business Plan</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-              Big Boy D-Lite E 3000W
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-[1.1]">
+              Solar-Powered Delivery Fleet
             </h2>
             <p className="mt-4 text-text-secondary leading-relaxed">
-              The platform for our pilot fleet. Purpose-built for urban last-mile delivery
-              with a lithium battery system designed for commercial duty cycles. Solar-charged
-              at depot, eliminating per-trip fuel costs entirely.
+              Our pilot fleet leverages the Big Boy D-Lite E 3000W platform — purpose-built for 
+              urban last-mile delivery with a lithium battery system designed for commercial duty 
+              cycles. Solar-charged at depot, eliminating per-trip fuel costs entirely.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-4">
