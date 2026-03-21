@@ -1,3 +1,5 @@
+import milanoLogo from "@/assets/milano-logo.png";
+
 export default function Footer() {
   const legalLinks = [
     { label: "Privacy Policy", href: "https://www.termsfeed.com/live/ae979cef-93e8-4041-8867-c00859e49ae5" },
