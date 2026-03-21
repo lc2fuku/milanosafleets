@@ -34,8 +34,11 @@ export default function Navbar() {
       }`}
     >
       <div className="container-narrow flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="text-xl font-extrabold tracking-tight text-foreground">
-          MILANO<span className="text-primary">SA</span>
+        <a href="#home" className="flex items-center gap-3">
+          <img src={milanoLogo} alt="Milano SA" className="h-10 md:h-12 w-auto rounded-full" />
+          <span className="text-xl font-extrabold tracking-tight text-foreground">
+            MILANO<span className="text-primary">SA</span>
+          </span>
         </a>
 
         {/* Desktop */}
