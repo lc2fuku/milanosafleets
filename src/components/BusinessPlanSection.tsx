@@ -3,12 +3,14 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ChevronLeft, ChevronRight, Battery, Zap, Gauge, Route, Timer, Disc, Weight, RefreshCw } from "lucide-react";
 import evBikeSide from "@/assets/ev-bike-side.jpg";
 import evBikeFront from "@/assets/ev-bike-front.jpg";
-import batterySwapStation from "@/assets/battery-swap-station.jpg";
+import evBikeRear from "@/assets/ev-bike-rear.jpg";
+import evBikeUber from "@/assets/ev-bike-uber.jpg";
 
 const images = [
-  { src: evBikeSide, alt: "Valternative V1 Pro Max — Side Profile" },
-  { src: evBikeFront, alt: "Electric delivery e-bike — Front View" },
-  { src: batterySwapStation, alt: "Battery Swapping Station — Locker System" },
+  { src: evBikeSide, alt: "Valternative V1 Pro Max with Checkers Sixty60 delivery box" },
+  { src: evBikeFront, alt: "Valternative V1 Pro Max — Side View" },
+  { src: evBikeRear, alt: "Checkers Sixty60 delivery riders on Valternative e-bikes" },
+  { src: evBikeUber, alt: "Valternative V1 at Uber E-Package Launch" },
 ];
 
 const specs = [

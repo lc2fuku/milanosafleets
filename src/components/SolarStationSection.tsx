@@ -1,7 +1,8 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Sun, Battery, RefreshCw, ShieldCheck, Gauge, Camera, Smartphone, Clock } from "lucide-react";
-import solarHub from "@/assets/solar-swap-hub.jpg";
 import batteryStation from "@/assets/battery-swap-station.jpg";
+import swapInAction from "@/assets/solar-swap-hub.jpg";
+import fleetWarehouse from "@/assets/fleet-warehouse.jpg";
 
 const stationSpecs = [
   { icon: Battery, label: "Cabinets", value: "8–12 slots", detail: "Per Station" },
