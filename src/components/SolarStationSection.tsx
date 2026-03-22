@@ -1,7 +1,8 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Sun, Battery, RefreshCw, ShieldCheck, Gauge, Camera, Smartphone, Clock } from "lucide-react";
-import solarHub from "@/assets/solar-swap-hub.jpg";
 import batteryStation from "@/assets/battery-swap-station.jpg";
+import swapInAction from "@/assets/solar-swap-hub.jpg";
+import fleetWarehouse from "@/assets/fleet-warehouse.jpg";
 
 const stationSpecs = [
   { icon: Battery, label: "Cabinets", value: "8–12 slots", detail: "Per Station" },
@@ -49,10 +50,13 @@ export default function SolarStationSection() {
             style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
           >
             <div className="rounded-md overflow-hidden border border-border">
-              <img src={batteryStation} alt="Battery swapping station locker system" className="w-full aspect-[4/3] object-cover" />
+              <img src={batteryStation} alt="Valternative Battery Charging Station lockers" className="w-full aspect-[4/3] object-cover" />
             </div>
             <div className="rounded-md overflow-hidden border border-border">
-              <img src={solarHub} alt="Solar-powered charging hub for e-bike fleet" className="w-full aspect-[16/9] object-cover" />
+              <img src={swapInAction} alt="Checkers Sixty60 driver swapping battery at Valternative station" className="w-full aspect-[16/9] object-cover" />
+            </div>
+            <div className="rounded-md overflow-hidden border border-border">
+              <img src={fleetWarehouse} alt="Valternative e-bike fleet lined up at warehouse with charging stations" className="w-full aspect-[16/9] object-cover" />
             </div>
           </div>
 
