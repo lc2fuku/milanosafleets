@@ -3,31 +3,31 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const timeline = [
   {
     year: "Year 1",
-    title: "Proof of Concept",
-    fleet: "10–20 scooters",
-    goal: "Validate 90-day pilot metrics with Checkers Sixty60. Prove R/km savings. Establish primary charging depot.",
-    revenue: "Break-even on operational costs by Month 6.",
+    title: "Proof of Concept — PE Pilot",
+    fleet: "20 e-bikes · 3 swap hubs",
+    goal: "Deploy in the Gqeberha Delivery Triangle (Walmer, Summerstrand, Newton Park, Motherwell). Validate R/km savings with Checkers Sixty60 and local QSR partners.",
+    revenue: "Break-even on operational costs by Month 14–18.",
   },
   {
     year: "Year 2",
-    title: "Cluster Rollout",
-    fleet: "50 scooters",
-    goal: "Expand to 3–5 high-density Checkers delivery hubs in the Eastern Cape. Implement secondary solar micro-depots.",
-    revenue: "15% net profit margin as economies of scale kick in.",
+    title: "Eastern Cape Expansion",
+    fleet: "50 e-bikes · 8 swap hubs",
+    goal: "Expand to 5–8 high-density delivery hubs across the Eastern Cape. Deploy secondary solar micro-depots at Engen/Shell forecourts.",
+    revenue: "15% net profit margin. R1.2M+ annual revenue.",
   },
   {
     year: "Year 3",
     title: "Regional Domination",
-    fleet: "150 scooters",
-    goal: "Full regional integration. Begin offering Fleet-as-a-Service white-label solutions to other local logistics partners.",
-    revenue: "Diversified revenue streams.",
+    fleet: "150 e-bikes · 20 swap hubs",
+    goal: "Full regional integration. Launch Fleet-as-a-Service white-label solutions. Approach Takealot and larger logistics partners.",
+    revenue: "Diversified revenue. Fleet rental + swap fees + branding.",
   },
   {
     year: "Year 4–5",
     title: "National Expansion",
-    fleet: "400+ scooters",
-    goal: "Expand into Western Cape and Gauteng. Establish centralized fleet maintenance and battery recycling hub.",
-    revenue: "National footprint with sustainable unit economics.",
+    fleet: "400+ e-bikes · 50+ swap hubs",
+    goal: "Expand into Western Cape and Gauteng. Establish centralized maintenance hub and battery recycling/second-life program.",
+    revenue: "National footprint. 70%+ clean energy across all stations.",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function TimelineSection() {
   return (
     <div ref={ref} className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
          style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}>
-      <h3 className="text-lg font-semibold text-foreground mb-8">5-Year Expansion Plan</h3>
+      <h3 className="text-lg font-semibold text-foreground mb-8">3–5 Year Expansion Plan</h3>
       <div className="space-y-6">
         {timeline.map((t, i) => (
           <TimelineItem key={t.year} item={t} index={i} />

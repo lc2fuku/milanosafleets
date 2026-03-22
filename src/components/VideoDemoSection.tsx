@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Play, FileText } from "lucide-react";
+import { Play } from "lucide-react";
 import { useState } from "react";
 
 export default function VideoDemoSection() {
@@ -18,7 +18,7 @@ export default function VideoDemoSection() {
             Investment Pitch Deck
           </h2>
           <p className="mt-4 text-text-secondary max-w-xl mx-auto leading-relaxed">
-            Watch our business plan pitch deck showcasing the solar-powered delivery fleet opportunity.
+            Watch our business plan pitch showcasing the solar-powered e-bike fleet and battery swapping opportunity.
           </p>
         </div>
 
@@ -47,18 +47,6 @@ export default function VideoDemoSection() {
                 </span>
               </button>
             )}
-          </div>
-
-          <div className="mt-6 flex justify-center">
-            <a
-              href="/documents/Big_Boy_D-Lite_3000W_Datasheet.pdf#toolbar=0&navpanes=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-200 text-sm font-semibold active:scale-[0.98]"
-            >
-              <FileText size={18} />
-              View Big Boy D-Lite 3000W Specification Datasheet
-            </a>
           </div>
         </div>
       </div>

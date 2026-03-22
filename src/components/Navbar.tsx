@@ -5,9 +5,11 @@ import { useAuth } from "@/hooks/useAuth";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Business Plan", href: "#business-plan" },
+  { label: "The Opportunity", href: "#opportunity" },
+  { label: "The Solution", href: "#solution" },
+  { label: "Operations", href: "#operations" },
   { label: "Financials", href: "#financials" },
+  { label: "The Ask", href: "#the-ask" },
   { label: "Business Info", href: "#business-info" },
   { label: "Contact", href: "#contact" },
 ];
@@ -43,13 +45,12 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-text-secondary hover:text-primary transition-colors duration-200"
+              className="text-xs font-medium text-text-secondary hover:text-primary transition-colors duration-200"
             >
               {l.label}
             </a>
@@ -87,7 +88,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Mobile toggle */}
         <button
           className="lg:hidden p-2 text-text-secondary hover:text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -96,7 +96,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-surface-alt border-t border-border">
           <div className="container-narrow py-6 flex flex-col gap-4">
