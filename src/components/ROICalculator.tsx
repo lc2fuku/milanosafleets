@@ -48,10 +48,10 @@ export default function ROICalculator() {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <ResultCard label="Monthly ICE Cost" value={`R${Math.round(monthlyIceCost).toLocaleString()}`} variant="destructive" />
-        <ResultCard label="Monthly EV Cost" value={`R${Math.round(monthlyEvCost).toLocaleString()}`} variant="primary" />
+        <ResultCard label="Monthly ICE Fuel Cost" value={`R${Math.round(monthlyIceCost).toLocaleString()}`} variant="destructive" />
+        <ResultCard label="Monthly EV Swap Cost" value={`R${Math.round(monthlyEvCost).toLocaleString()}`} variant="primary" />
         <ResultCard label="Monthly Savings" value={`R${Math.round(monthlySavings).toLocaleString()}`} sub={`${savingsPercent}% reduction`} variant="highlight" />
-        <ResultCard label="Monthly Revenue" value={`R${Math.round(totalMonthlyRevenue).toLocaleString()}`} sub={`Rental + Swaps`} variant="primary" />
+        <ResultCard label="Monthly Revenue" value={`R${Math.round(totalMonthlyRevenue).toLocaleString()}`} sub={`R1,250/wk rental + R50/swap`} variant="primary" />
       </div>
     </div>
   );

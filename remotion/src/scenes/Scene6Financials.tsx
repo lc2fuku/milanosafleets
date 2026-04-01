@@ -75,8 +75,8 @@ export const Scene6Financials = () => {
         opacity: interpolate(frame, [75, 95], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
       }}>
         {[
-          { title: "Bike Rental", desc: "R1,200/month per unit" },
-          { title: "Swap Fee", desc: "R20 per battery swap" },
+          { title: "Bike Rental", desc: "R1,250/week per unit" },
+          { title: "Swap Fee", desc: "R50 per battery swap" },
           { title: "White-Label", desc: "Branded fleet marketing" },
           { title: "Solar Surplus", desc: "Phone charging & Wi-Fi" },
         ].map((r, i) => (
