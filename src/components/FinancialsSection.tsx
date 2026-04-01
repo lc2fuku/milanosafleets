@@ -43,8 +43,8 @@ export default function FinancialsSection() {
             The ROI · Break-Even at Month 14–18
           </h2>
           <p className="mt-4 text-text-secondary max-w-2xl leading-relaxed">
-            A rental + swap fee model with proven unit economics. 20km per kWh efficiency at R0.20/km 
-            vs R0.65/km petrol — a 69% operating cost reduction.
+            A rental + swap fee model with proven unit economics. R1,250/week bike rental 
+            + R50 per battery swap — delivering strong margins on a proven model.
           </p>
         </div>
 

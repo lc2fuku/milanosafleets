@@ -11,7 +11,7 @@ const metrics = [
   { value: "24M km", label: "Covered by Valternative fleet in 18 months" },
   { value: "100+", label: "Swapping stations deployed nationally" },
   { value: "2,000/day", label: "Battery swaps processed daily" },
-  { value: "R0.20/km", label: "vs R0.65/km petrol operating cost" },
+  { value: "R50/swap", label: "Fully charged battery swap cost" },
 ];
 
 const targets = [

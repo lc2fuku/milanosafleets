@@ -7,20 +7,25 @@ export default function ROICalculator() {
   const [dailyKm, setDailyKm] = useState(80);
   const [petrolPrice, setPetrolPrice] = useState(20.3);
 
-  // ICE 125cc ~30km/L, EV costs R0.20/km (solar swap)
+  // ICE 125cc ~30km/L, EV costs R0.50/km (R50 per swap, ~100km per battery)
   const iceCostPerKm = petrolPrice / 30;
-  const evCostPerKm = 0.20;
-  const workingDays = 22;
+  const evCostPerKm = 0.50;
+  const workingDays = 7; // weekly model
 
-  const monthlyIceCost = fleetSize * dailyKm * workingDays * iceCostPerKm;
-  const monthlyEvCost = fleetSize * dailyKm * workingDays * evCostPerKm;
-  const monthlySavings = monthlyIceCost - monthlyEvCost;
-  const savingsPercent = ((monthlySavings / monthlyIceCost) * 100).toFixed(0);
+  const weeklyIceCost = fleetSize * dailyKm * workingDays * iceCostPerKm;
+  const weeklyEvCost = fleetSize * dailyKm * workingDays * evCostPerKm;
+  const weeklySavings = weeklyIceCost - weeklyEvCost;
+  const monthlySavings = weeklySavings * 4;
+  const monthlyIceCost = weeklyIceCost * 4;
+  const monthlyEvCost = weeklyEvCost * 4;
+  const savingsPercent = ((weeklySavings / weeklyIceCost) * 100).toFixed(0);
 
   // Revenue from rentals + swaps
-  const monthlyRentalRevenue = fleetSize * 1200;
+  const weeklyRentalRevenue = fleetSize * 1250;
   const dailySwaps = fleetSize * 2; // ~2 swaps per bike per day
-  const monthlySwapRevenue = dailySwaps * workingDays * 20;
+  const weeklySwapRevenue = dailySwaps * workingDays * 50;
+  const monthlyRentalRevenue = weeklyRentalRevenue * 4;
+  const monthlySwapRevenue = weeklySwapRevenue * 4;
   const totalMonthlyRevenue = monthlyRentalRevenue + monthlySwapRevenue;
 
   return (
