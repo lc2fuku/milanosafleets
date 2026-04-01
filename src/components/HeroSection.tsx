@@ -44,8 +44,8 @@ export default function HeroSection() {
             className="mt-8 flex flex-wrap gap-6 animate-fade-up"
             style={{ animationDelay: "700ms" }}
           >
-            <Metric value="R0.20/km" label="EV cost" />
-            <Metric value="R0.65/km" label="Petrol cost" />
+            <Metric value="R1,250/wk" label="Bike rental" />
+            <Metric value="R50/swap" label="Battery swap" />
             <Metric value="<60s" label="Battery swap" />
           </div>
 

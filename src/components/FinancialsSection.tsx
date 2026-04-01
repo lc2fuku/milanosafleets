@@ -22,8 +22,8 @@ const cumulativeCost = [
 ];
 
 const revenueModel = [
-  { stream: "Monthly Bike Rental", price: "R1,200/bike/month", note: "From R1,000 for Uber drivers" },
-  { stream: "Battery Swap Fee", price: "R20 per swap", note: "~2,000 swaps/day at scale" },
+  { stream: "Weekly Bike Rental", price: "R1,250/bike/week", note: "From R1,000 for Uber drivers" },
+  { stream: "Battery Swap Fee", price: "R50 per swap", note: "~2,000 swaps/day at scale" },
   { stream: "White-Label Fleet Branding", price: "Custom", note: "Marketing fee on branded bikes + boxes" },
   { stream: "Battery Second Life", price: "R2,000–R5,000/unit", note: "Home backup power from retired packs" },
   { stream: "Solar Surplus Services", price: "Variable", note: "Phone charging, Wi-Fi at swap hubs" },
@@ -43,8 +43,8 @@ export default function FinancialsSection() {
             The ROI · Break-Even at Month 14–18
           </h2>
           <p className="mt-4 text-text-secondary max-w-2xl leading-relaxed">
-            A rental + swap fee model with proven unit economics. 20km per kWh efficiency at R0.20/km 
-            vs R0.65/km petrol — a 69% operating cost reduction.
+            A rental + swap fee model with proven unit economics. R1,250/week bike rental 
+            + R50 per battery swap — delivering strong margins on a proven model.
           </p>
         </div>
 
