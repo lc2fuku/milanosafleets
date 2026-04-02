@@ -18,7 +18,7 @@ export default function FundingAskSection() {
              style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}>
           <span className="text-xs font-semibold tracking-widest uppercase text-primary">The Ask</span>
           <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Capital Requirement: R3,000,000
+            Capital Requirement: R2,900,000
           </h2>
           <p className="mt-4 text-text-secondary max-w-2xl leading-relaxed">
             A phased funding ask to deploy 20 e-bikes and 3 solar swapping hubs in Gqeberha, 
@@ -29,7 +29,7 @@ export default function FundingAskSection() {
         {/* Key numbers */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: "R3M", label: "Total Ask" },
+            { value: "R2.9M", label: "Total Ask" },
             { value: "14–18mo", label: "Break-Even" },
             { value: "69%", label: "Cost Reduction vs ICE" },
             { value: "20+ Jobs", label: "Created in Year 1" },

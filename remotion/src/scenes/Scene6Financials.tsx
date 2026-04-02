@@ -1,10 +1,10 @@
 import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } from "remotion";
 
 const fundBreakdown = [
-  { label: "Fleet Acquisition", pct: 50, color: "#10b981" },
-  { label: "Solar Charging Infra", pct: 20, color: "#007a78" },
-  { label: "Working Capital", pct: 20, color: "#3b82f6" },
-  { label: "Tech & Software", pct: 10, color: "#8b5cf6" },
+  { label: "Fleet Acquisition", pct: 69, color: "#10b981" },
+  { label: "Solar Charging Infra", pct: 14, color: "#007a78" },
+  { label: "Tech & Software", pct: 10, color: "#3b82f6" },
+  { label: "Marketing & Working Capital", pct: 7, color: "#8b5cf6" },
 ];
 
 export const Scene6Financials = () => {
@@ -31,7 +31,7 @@ export const Scene6Financials = () => {
         opacity: amountOp, transform: `scale(${amountScale})`, transformOrigin: "left center",
       }}>
         <div style={{ fontSize: 80, fontWeight: 900, color: "white", fontFamily: "sans-serif" }}>
-          R3,000,000
+          R2,900,000
         </div>
         <div style={{ fontSize: 24, color: "#94a3b8", fontFamily: "sans-serif", fontWeight: 500, marginTop: 4 }}>
           Total Capital Requirement · Break-even at Month 14–18
