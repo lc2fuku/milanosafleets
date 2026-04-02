@@ -29,7 +29,7 @@ export default function FundingAskSection() {
         {/* Key numbers */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: "R3M", label: "Total Ask" },
+            { value: "R2.9M", label: "Total Ask" },
             { value: "14–18mo", label: "Break-Even" },
             { value: "69%", label: "Cost Reduction vs ICE" },
             { value: "20+ Jobs", label: "Created in Year 1" },

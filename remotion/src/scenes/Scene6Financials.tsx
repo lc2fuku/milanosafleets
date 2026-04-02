@@ -31,7 +31,7 @@ export const Scene6Financials = () => {
         opacity: amountOp, transform: `scale(${amountScale})`, transformOrigin: "left center",
       }}>
         <div style={{ fontSize: 80, fontWeight: 900, color: "white", fontFamily: "sans-serif" }}>
-          R3,000,000
+          R2,900,000
         </div>
         <div style={{ fontSize: 24, color: "#94a3b8", fontFamily: "sans-serif", fontWeight: 500, marginTop: 4 }}>
           Total Capital Requirement · Break-even at Month 14–18

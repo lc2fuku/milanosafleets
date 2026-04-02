@@ -177,7 +177,7 @@ function StartupCapitalTable() {
             ))}
             <tr>
               <td className="py-4 text-foreground font-bold" colSpan={2}>Total Capital Required</td>
-              <td className="py-4 text-right font-bold tabular-nums text-primary text-lg">R3,000,000</td>
+              <td className="py-4 text-right font-bold tabular-nums text-primary text-lg"><td className="py-4 text-right font-bold tabular-nums text-primary text-lg">R2,900,000</td></td>
             </tr>
           </tbody>
         </table>
