@@ -18,7 +18,7 @@ export default function FundingAskSection() {
              style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}>
           <span className="text-xs font-semibold tracking-widest uppercase text-primary">The Ask</span>
           <h2 className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Capital Requirement: R3,000,000
+            Capital Requirement: R2,900,000
           </h2>
           <p className="mt-4 text-text-secondary max-w-2xl leading-relaxed">
             A phased funding ask to deploy 20 e-bikes and 3 solar swapping hubs in Gqeberha, 
