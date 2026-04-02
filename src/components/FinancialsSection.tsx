@@ -148,12 +148,10 @@ function RevenueModelTable() {
 function StartupCapitalTable() {
   const { ref, isVisible } = useScrollReveal();
   const rows = [
-    { item: "20 × EV Motorcycles (V1 Pro Max equiv.)", cost: "R1,200,000", pct: "40%" },
-    { item: "3 × Solar Battery Swapping Hubs", cost: "R600,000", pct: "20%" },
-    { item: "IoT Telematics, Fleet Software & App", cost: "R450,000", pct: "15%" },
-    { item: "Working Capital, Salaries & Insurance (6mo)", cost: "R450,000", pct: "15%" },
-    { item: "Marketing, Branding & Launch", cost: "R150,000", pct: "5%" },
-    { item: "Depot Leasehold Improvements", cost: "R150,000", pct: "5%" },
+    { item: "20 × EV Motorcycles (V1 Pro Max equiv.)", cost: "R2,000,000", pct: "69%" },
+    { item: "3 × Solar Battery Swapping Hubs", cost: "R400,000", pct: "14%" },
+    { item: "IoT Telematics, Fleet Software & App", cost: "R300,000", pct: "10%" },
+    { item: "Marketing, Working Capital & Launch", cost: "R200,000", pct: "7%" },
   ];
 
   return (
