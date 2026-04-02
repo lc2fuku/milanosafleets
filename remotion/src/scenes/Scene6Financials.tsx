@@ -1,10 +1,10 @@
 import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } from "remotion";
 
 const fundBreakdown = [
-  { label: "Fleet Acquisition", pct: 50, color: "#10b981" },
-  { label: "Solar Charging Infra", pct: 20, color: "#007a78" },
-  { label: "Working Capital", pct: 20, color: "#3b82f6" },
-  { label: "Tech & Software", pct: 10, color: "#8b5cf6" },
+  { label: "Fleet Acquisition", pct: 69, color: "#10b981" },
+  { label: "Solar Charging Infra", pct: 14, color: "#007a78" },
+  { label: "Tech & Software", pct: 10, color: "#3b82f6" },
+  { label: "Marketing & Working Capital", pct: 7, color: "#8b5cf6" },
 ];
 
 export const Scene6Financials = () => {
