@@ -5,10 +5,10 @@ import TimelineSection from "./TimelineSection";
 import TeamGrowthSection from "./TeamGrowthSection";
 
 const fundData = [
-  { name: "Fleet Acquisition (60%)", value: 1800000, color: "hsl(160, 84%, 39%)" },
-  { name: "Solar Charging Infrastructure (20%)", value: 600000, color: "hsl(174, 100%, 24%)" },
-  { name: "Tech & Software (15%)", value: 450000, color: "hsl(215, 25%, 63%)" },
-  { name: "Marketing & Working Capital (5%)", value: 150000, color: "hsl(217, 19%, 40%)" },
+  { name: "Fleet Acquisition (69%)", value: 2000000, color: "hsl(160, 84%, 39%)" },
+  { name: "Solar Charging Infrastructure (14%)", value: 400000, color: "hsl(174, 100%, 24%)" },
+  { name: "Tech & Software (10%)", value: 300000, color: "hsl(215, 25%, 63%)" },
+  { name: "Marketing & Working Capital (7%)", value: 200000, color: "hsl(217, 19%, 40%)" },
 ];
 
 const cumulativeCost = [
