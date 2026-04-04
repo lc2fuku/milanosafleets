@@ -43,8 +43,8 @@ export default function FinancialsSection() {
             The ROI · Break-Even at Month 14–18
           </h2>
           <p className="mt-4 text-text-secondary max-w-2xl leading-relaxed">
-            A rental + swap fee model with proven unit economics. R1,250/week bike rental 
-            + R50 per battery swap — delivering strong margins on a proven model.
+            A rental + swap fee model with proven unit economics. R1,500/week bike rental (20% premium)
+            + R50 per prepaid solar battery swap — delivering strong margins on a proven model.
           </p>
         </div>
 
