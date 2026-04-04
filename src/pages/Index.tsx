@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import ShopSection from "@/components/ShopSection";
 import AboutSection from "@/components/AboutSection";
 import BusinessPlanSection from "@/components/BusinessPlanSection";
 import SolarStationSection from "@/components/SolarStationSection";
@@ -15,6 +16,7 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+      <ShopSection />
       <AboutSection />
       <BusinessPlanSection />
       <SolarStationSection />

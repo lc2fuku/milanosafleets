@@ -22,10 +22,10 @@ const cumulativeCost = [
 ];
 
 const revenueModel = [
-  { stream: "Weekly Bike Rental", price: "R1,250/bike/week", note: "From R1,000 for Uber drivers" },
-  { stream: "Battery Swap Fee", price: "R50 per swap", note: "~2,000 swaps/day at scale" },
-  { stream: "White-Label Fleet Branding", price: "Custom", note: "Marketing fee on branded bikes + boxes" },
-  { stream: "Battery Second Life", price: "R2,000–R5,000/unit", note: "Home backup power from retired packs" },
+  { stream: "Weekly Bike Rental", price: "R1,500/bike/week", note: "20% premium (was R1,250)" },
+  { stream: "Battery Swap Fee", price: "R50 per swap", note: "Prepaid solar-powered, ~2,000 swaps/day at scale" },
+  { stream: "White-Label Fleet Branding", price: "R3,500/package", note: "Branded bikes + delivery boxes" },
+  { stream: "Battery Second Life", price: "R3,500/unit", note: "Home backup power from retired packs" },
   { stream: "Solar Surplus Services", price: "Variable", note: "Phone charging, Wi-Fi at swap hubs" },
 ];
 
@@ -43,8 +43,8 @@ export default function FinancialsSection() {
             The ROI · Break-Even at Month 14–18
           </h2>
           <p className="mt-4 text-text-secondary max-w-2xl leading-relaxed">
-            A rental + swap fee model with proven unit economics. R1,250/week bike rental 
-            + R50 per battery swap — delivering strong margins on a proven model.
+            A rental + swap fee model with proven unit economics. R1,500/week bike rental (20% premium)
+            + R50 per prepaid solar battery swap — delivering strong margins on a proven model.
           </p>
         </div>
 
