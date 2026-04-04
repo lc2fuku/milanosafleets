@@ -22,10 +22,10 @@ const cumulativeCost = [
 ];
 
 const revenueModel = [
-  { stream: "Weekly Bike Rental", price: "R1,250/bike/week", note: "From R1,000 for Uber drivers" },
-  { stream: "Battery Swap Fee", price: "R50 per swap", note: "~2,000 swaps/day at scale" },
-  { stream: "White-Label Fleet Branding", price: "Custom", note: "Marketing fee on branded bikes + boxes" },
-  { stream: "Battery Second Life", price: "R2,000–R5,000/unit", note: "Home backup power from retired packs" },
+  { stream: "Weekly Bike Rental", price: "R1,500/bike/week", note: "20% premium (was R1,250)" },
+  { stream: "Battery Swap Fee", price: "R50 per swap", note: "Prepaid solar-powered, ~2,000 swaps/day at scale" },
+  { stream: "White-Label Fleet Branding", price: "R3,500/package", note: "Branded bikes + delivery boxes" },
+  { stream: "Battery Second Life", price: "R3,500/unit", note: "Home backup power from retired packs" },
   { stream: "Solar Surplus Services", price: "Variable", note: "Phone charging, Wi-Fi at swap hubs" },
 ];
 
