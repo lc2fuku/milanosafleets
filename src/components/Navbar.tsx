@@ -59,6 +59,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
+          <CartDrawer />
           {socials.map((s, i) => (
             <a
               key={i}
