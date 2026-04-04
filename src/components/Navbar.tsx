@@ -2,15 +2,16 @@ import { useState, useEffect } from "react";
 import { Facebook, Instagram, Youtube, Menu, X, LogIn, LogOut } from "lucide-react";
 import milanoLogo from "@/assets/milano-logo.png";
 import { useAuth } from "@/hooks/useAuth";
+import CartDrawer from "@/components/CartDrawer";
 
 const navLinks = [
   { label: "Home", href: "#home" },
+  { label: "Shop", href: "#shop" },
   { label: "The Opportunity", href: "#opportunity" },
   { label: "The Solution", href: "#solution" },
   { label: "Operations", href: "#operations" },
   { label: "Financials", href: "#financials" },
   { label: "The Ask", href: "#the-ask" },
-  { label: "Business Info", href: "#business-info" },
   { label: "Contact", href: "#contact" },
 ];
 
